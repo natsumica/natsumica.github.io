@@ -1,6 +1,6 @@
 # natsumica.github.io
 
-Developer website for Natsumica apps.
+Developer website for Natsumin apps.
 
 This repository is intended to publish:
 
