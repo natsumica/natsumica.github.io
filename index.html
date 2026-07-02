@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natsumica Apps</title>
+  <meta name="description" content="Natsumicaが開発しているアプリの公式サイトです。">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #26231f;
+      --muted: #6a635b;
+      --paper: #fbf8f1;
+      --line: #ded5c8;
+      --accent: #bc4b62;
+      --accent-ink: #ffffff;
+      --panel: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header,
+    main,
+    footer {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 56px 0 28px;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: clamp(34px, 7vw, 64px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      padding: 22px 0 56px;
+    }
+
+    .app {
+      display: grid;
+      gap: 18px;
+      min-height: 230px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .app:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+      box-shadow: 0 14px 36px rgba(38, 35, 31, 0.1);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      color: var(--accent-ink);
+      background: var(--accent);
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .app h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .app p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: auto;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 26px 0 38px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+      header,
+      main,
+      footer {
+        width: min(100% - 28px, 960px);
+      }
+
+      header {
+        padding-top: 38px;
+      }
+
+      .app {
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="brand">Natsumica Apps</h1>
+    <p class="lead">日々の入力や小さな作業を、少し心地よくするためのアプリを作っています。</p>
+  </header>
+
+  <main>
+    <section class="apps" aria-label="アプリ一覧">
+      <a class="app" href="https://natsumica.github.io/kotokey-site/ja/">
+        <span class="icon" aria-hidden="true">K</span>
+        <span>
+          <h2>KotoKey</h2>
+          <p>毎日の入力に、心地よい打鍵感を。</p>
+        </span>
+        <span class="links">
+          <span>日本語</span>
+          <span>English</span>
+          <span>Privacy</span>
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Natsumica</span>
+  </footer>
+</body>
+</html>
